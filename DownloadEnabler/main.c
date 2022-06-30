@@ -145,6 +145,7 @@ int module_start(SceSize args, void *argp) {
       case 0xF476E785: // 3.71 retail
       case 0x939FFBE9: // 3.72 retail
       case 0x734D476A: // 3.73 retail
+      case 0x51CB6207: // 3.74 retail
       {
         hooks[0] = taiInjectData(info.modid, 0, 0x50AA28, "GET", 4);
         hooks[1] = taiHookFunctionOffset(&ExportFileRef, info.modid, 0, 0x11644E, 1, ExportFilePatched);

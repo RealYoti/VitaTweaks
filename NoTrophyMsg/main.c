@@ -56,6 +56,7 @@ int module_start(SceSize args, void *argp) {
       case 0xF476E785: // 3.71 retail
       case 0x939FFBE9: // 3.72 retail
       case 0x734D476A: // 3.73 retail
+      case 0x51CB6207: // 3.74 retail
         hookid = taiHookFunctionOffset(&savedata_aid_check_ref, info.modid, 0, 0x28BC80, 1, savedata_aid_check_patched);
         break;
 

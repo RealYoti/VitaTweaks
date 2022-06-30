@@ -52,6 +52,7 @@ int module_start(SceSize args, void *argp) {
       case 0xF476E785: // 3.71 retail
       case 0x939FFBE9: // 3.72 retail
       case 0x734D476A: // 3.73 retail
+      case 0x51CB6207: // 3.74 retail
         hooks[0] = taiInjectData(info.modid, 0, 0x23556E, &movs_a1_1_nop_opcode, sizeof(movs_a1_1_nop_opcode));
         hooks[1] = taiInjectData(info.modid, 0, 0x23626E, &movs_a1_1_nop_opcode, sizeof(movs_a1_1_nop_opcode));
         break;
