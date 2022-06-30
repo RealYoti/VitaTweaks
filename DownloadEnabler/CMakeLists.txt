@@ -21,7 +21,7 @@ add_executable(download_enabler
 target_link_libraries(download_enabler
   SceIofilemgr_stub
   SceLibKernel_stub
-  taiHEN_stub
+  taihen_stub
 )
 
 vita_create_self(download_enabler.suprx download_enabler CONFIG exports.yml UNSAFE)

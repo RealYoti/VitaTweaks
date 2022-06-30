@@ -19,7 +19,7 @@ add_executable(notrophymsg
 )
 
 target_link_libraries(notrophymsg
-  taiHEN_stub
+  taihen_stub
 )
 
 vita_create_self(notrophymsg.suprx notrophymsg CONFIG exports.yml UNSAFE)

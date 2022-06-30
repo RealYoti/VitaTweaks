@@ -120,7 +120,7 @@ static int sceSysmoduleLoadModuleInternalWithArgPatched(SceUInt32 id, SceSize ar
     int size = sceIoLseek32(fd, 0, SCE_SEEK_END);
     sceIoLseek32(fd, 0, SCE_SEEK_SET);
 
-    custom_warning = (wchar_t *)sce_paf_private_malloc(size + 2);
+    custom_warning = (wchar_t *)sce_paf_malloc(size + 2);
     if (!custom_warning) {
       sceIoClose(fd);
       return res;
@@ -132,7 +132,7 @@ static int sceSysmoduleLoadModuleInternalWithArgPatched(SceUInt32 id, SceSize ar
     custom_warning[size / 2] = L'\0';  // null terminate the string
 
     if (custom_warning[0] != 0xFEFF) {
-      sce_paf_private_free(custom_warning);
+      sce_paf_free(custom_warning);
       return res;
     }
 

@@ -19,7 +19,7 @@ add_executable(nolockscreen
 )
 
 target_link_libraries(nolockscreen
-  taiHEN_stub
+  taihen_stub
 )
 
 vita_create_self(nolockscreen.suprx nolockscreen CONFIG exports.yml UNSAFE)
